@@ -1,0 +1,86 @@
+ 
+<!doctype html> 
+<html lang="pt-br" class="_1000 imagemB longa">
+<head> 
+	<meta charset="utf-8" /> 
+    <title>ABCabc</title> 
+	
+<style>
+	body{
+	font-family: "Montserrat";
+	background:  #b7dbff;
+	}	
+	
+	.principal {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 98vh;
+		color: #111744;	
+	}
+		
+	.texto{
+		border: none;
+ 		padding: 1rem;
+		border-radius: 1rem;
+		background: white;
+		box-shadow: 5px 5px 10px #0d102e29;
+ 		transition: 0.3s;
+		width: 50%;
+		margin-bottom: 2vh;
+	}
+	
+	.texto::placeholder{
+		font-family: "Montserrat";
+		font-size: 16px;
+		text-align: center;		
+		
+	}
+
+	.texto:focus{
+		outline-color: #e8e8e8;
+ 		font-family: "Montserrat";
+		font-size: 16px;
+	}
+	
+	.texto:not(:focus) {
+		outline-color: #e8e8e8;
+ 		font-family: "Montserrat";
+		font-size: 16px;
+		}
+
+	img{
+		margin-bottom: 3vh;
+	}
+	
+</style>
+	
+</head>
+	
+<body>
+	
+<main class="principal">
+	
+	<img src="aA.png">
+
+	<textarea placeholder="digite aqui o texto que deseja minimizar" id="textoMinimizar" class="texto" oninput="convertToLowerCase()"></textarea>
+	<textarea placeholder="DIGITE AQUI O TEXTO QUE DESEJA CAPITALIZAR" id="textoCapitalizar" class="texto" oninput="convertToUpperCase()"></textarea>
+
+</main>	
+
+	<script>
+			function convertToUpperCase() {
+			var input = document.getElementById("textoCapitalizar");
+			input.value = input.value.toUpperCase();
+			}
+				
+				function convertToLowerCase() {
+				var input = document.getElementById("textoMinimizar");
+				input.value = input.value.toLowerCase();
+			}
+	</script>
+	
+	
+</body>
+	
